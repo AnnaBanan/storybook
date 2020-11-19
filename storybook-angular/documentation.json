@@ -166,6 +166,64 @@
             }
         },
         {
+            "name": "ChipComponent",
+            "id": "component-ChipComponent-f311a436760ccf0fa0b570943fba193d",
+            "file": "src/app/components/Chip/chip.component.ts",
+            "encapsulation": [
+                "ViewEncapsulation.None"
+            ],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "sd-chip",
+            "styleUrls": [
+                "./chip.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./chip.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 13
+                }
+            ],
+            "hostBindings": [
+                {
+                    "name": "class.chip",
+                    "defaultValue": "true",
+                    "line": 11
+                }
+            ],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit, HostBinding, ViewEncapsulation, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'sd-chip',\n  templateUrl: './chip.component.html',\n  styleUrls: ['./chip.component.scss'],\n  encapsulation: ViewEncapsulation.None,\n})\nexport class ChipComponent implements OnInit {\n\n  @HostBinding('class.chip') sdChip = true;\n\n  ngOnInit(): void {}\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ":root {\n  --color-primary-400: var(--color-yellow-400);\n  --color-primary-300: var(--color-yellow-300);\n  --color-primary-200: var(--color-yellow-200);\n  --color-primary-100: var(--color-yellow-100);\n  --color-secondary-400: var(--color-blue-400);\n  --color-secondary-300: var(--color-blue-300);\n  --color-secondary-200: var(--color-blue-200);\n  --color-secondary-100: var(--color-blue-100);\n  --color-grey-800: #1c1c21;\n  --color-grey-700: #303038;\n  --color-grey-700-rgb: 48, 48, 56;\n  --color-grey-600: #53535f;\n  --color-grey-500: #757584;\n  --color-grey-400: #94949e;\n  --color-grey-300: #cdcdd0;\n  --color-grey-200: #e2e2e4;\n  --color-grey-100: #f7f7f8;\n  --color-white: #fff;\n  --color-red-400: #d10002;\n  --color-red-300: #ff4e50;\n  --color-red-200: #ff7072;\n  --color-red-100: #ffe0e0;\n  --color-green-400: #007a4b;\n  --color-green-300: #00c176;\n  --color-green-200: #00d683;\n  --color-green-100: #c5fce7;\n  --color-yellow-400: #7a6200;\n  --color-yellow-300: #fc0;\n  --color-yellow-200: #ffd942;\n  --color-yellow-100: #fff6d1;\n  --color-blue-400: #007c8a;\n  --color-blue-300: #009daf;\n  --color-blue-200: #0ab3c7;\n  --color-blue-100: #e2fbfd;\n  --color-facebook: #3b5998;\n  --color-fbmessenger: #0084ff;\n  --color-twitter: #1da1f2;\n  --color-whatsapp: #25d366;\n  --color-linkedin: #0077b5;\n  --color-focus: #72c5ff;\n}\n/* ---------------------------------- CHIPS --------------------------------- */\n.chip {\n  display: inline-flex;\n  align-items: center;\n  height: 2rem;\n  padding: 0;\n  color: var(--color-grey-700);\n  white-space: nowrap;\n  vertical-align: middle;\n  background-color: var(--color-grey-200);\n  border-radius: 1rem;\n  outline: 0;\n  font-size: 1rem;\n  line-height: 1.5rem;\n  transition-timing-function: ease;\n  transition-duration: 150ms;\n  transition-property: background-color, color;\n}\n.chip__label {\n  display: flex;\n  align-items: center;\n  padding: 0.25rem 0.75rem;\n  white-space: nowrap;\n}\n.chip:hover {\n  cursor: pointer;\n  background-color: var(--color-grey-300);\n}\n.chip:hover .sd-icon,\n.chip:hover i {\n  color: var(--color-grey-700);\n}\n.chip.chip--is-selected {\n  color: var(--color-white);\n  background-color: var(--color-secondary-400);\n}\n.chip.chip--is-selected .sd-icon,\n.chip.chip--is-selected i {\n  color: var(--color-white);\n}\n.chip.chip--is-disabled {\n  cursor: not-allowed;\n  opacity: 0.25;\n}\n.chip.chip--is-disabled:hover {\n  cursor: not-allowed;\n  opacity: 0.25;\n  -webkit-animation-name: disabled_shake_animation;\n          animation-name: disabled_shake_animation;\n  -webkit-animation-duration: 0.3s;\n          animation-duration: 0.3s;\n  -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);\n          animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);\n  background-color: var(--color-grey-200);\n}\n@-webkit-keyframes disabled_shake_animation {\n  10% {\n    transform: translateX(-10px);\n  }\n  40% {\n    transform: translateX(10px);\n  }\n  70% {\n    transform: translateX(-10px);\n  }\n  100% {\n    transform: translateX(10px);\n  }\n}\n@keyframes disabled_shake_animation {\n  10% {\n    transform: translateX(-10px);\n  }\n  40% {\n    transform: translateX(10px);\n  }\n  70% {\n    transform: translateX(-10px);\n  }\n  100% {\n    transform: translateX(10px);\n  }\n}\n.chip.chip--is-disabled:hover .sd-icon,\n.chip.chip--is-disabled:hover i {\n  color: var(--color-grey-500);\n}\n.chip .sd-icon,\n.chip i {\n  width: 1.5rem;\n  height: 1.5rem;\n  margin: 0.25rem -0.25rem 0.25rem 0.5rem;\n  font-size: 1.5rem;\n  color: var(--color-grey-500);\n}\n.chip__action {\n  display: inline-block;\n  width: 1rem;\n  height: 1rem;\n  margin: 0.25rem 0.5rem 0.25rem -0.25rem;\n  font-size: 1rem;\n  color: var(--color-grey-500);\n}\n.chip__action .sd-icon,\n.chip__action i {\n  float: left;\n  width: 1rem;\n  height: 1rem;\n  margin: 0;\n  font-size: 1rem;\n  color: var(--color-grey-500);\n}\n/*# sourceMappingURL=chips.css.map */\n",
+                    "styleUrl": "./chip.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<ng-container>\n  <span class=\"chip__label\">\n    <ng-content></ng-content>\n  </span>\n</ng-container>\n\n"
+        },
+        {
             "name": "HeaderComponent",
             "id": "component-HeaderComponent-246e2a69dc126a3bd76c6328dd3b93e2",
             "file": "src/stories/header.component.ts",
@@ -288,6 +346,80 @@
                 }
             ],
             "stylesData": ""
+        },
+        {
+            "name": "TaskComponent",
+            "id": "component-TaskComponent-81a7c1fc6e21f409a604ecea7cc17f15",
+            "file": "src/app/components/Task/task.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-task",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<div class=\"list-item\">\n  <input type=\"text\" [value]=\"task.title\" readonly=\"true\" />\n</div>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "task",
+                    "line": 14,
+                    "type": "any"
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onArchiveTask",
+                    "defaultValue": "new EventEmitter()",
+                    "line": 20,
+                    "type": "EventEmitter<any>"
+                },
+                {
+                    "name": "onPinTask",
+                    "defaultValue": "new EventEmitter()",
+                    "line": 17,
+                    "type": "EventEmitter<any>"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 24
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'app-task',\n  template: `\n    <div class=\"list-item\">\n      <input type=\"text\" [value]=\"task.title\" readonly=\"true\" />\n    </div>\n  `,\n})\nexport class TaskComponent implements OnInit {\n  title: string;\n  @Input() task: any;\n\n  // tslint:disable-next-line: no-output-on-prefix\n  @Output() onPinTask: EventEmitter<any> = new EventEmitter();\n\n  // tslint:disable-next-line: no-output-on-prefix\n  @Output() onArchiveTask: EventEmitter<any> = new EventEmitter();\n\n  constructor() {}\n\n  ngOnInit() {}\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 20
+            },
+            "implements": [
+                "OnInit"
+            ]
         }
     ],
     "modules": [
@@ -303,6 +435,9 @@
                     "elements": [
                         {
                             "name": "AppComponent"
+                        },
+                        {
+                            "name": "ChipComponent"
                         }
                     ]
                 },
@@ -365,12 +500,44 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "actionsData",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/Task/task.stories.ts",
+                "type": "object",
+                "defaultValue": "{\n  onPinTask: action('onPinTask'),\n  onArchiveTask: action('onArchiveTask'),\n}"
+            },
+            {
+                "name": "Archived",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/Task/task.stories.ts",
+                "type": "",
+                "defaultValue": "() => ({\n  component: TaskComponent,\n  props: {\n    task: {\n      ...taskData,\n      state: 'TASK_ARCHIVED',\n    },\n    onPinTask: actionsData.onPinTask,\n    onArchiveTask: actionsData.onArchiveTask,\n  },\n})"
+            },
+            {
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/test.ts",
                 "type": "",
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/Chip/chip.stories.ts",
+                "type": "",
+                "defaultValue": "() => ({\n  component: ChipComponent\n\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/Task/task.stories.ts",
+                "type": "",
+                "defaultValue": "() => ({\n  component: TaskComponent,\n  props: {\n    task: taskData,\n    onPinTask: actionsData.onPinTask,\n    onArchiveTask: actionsData.onArchiveTask,\n  },\n})"
             },
             {
                 "name": "environment",
@@ -429,6 +596,14 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Pinned",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/Task/task.stories.ts",
+                "type": "",
+                "defaultValue": "() => ({\n  component: TaskComponent,\n  props: {\n    task: {\n      ...taskData,\n      state: 'TASK_PINNED',\n    },\n    onPinTask: actionsData.onPinTask,\n    onArchiveTask: actionsData.onArchiveTask,\n  },\n})"
+            },
+            {
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -460,12 +635,12 @@
                 "defaultValue": "Template.bind({})"
             },
             {
-                "name": "Template",
+                "name": "taskData",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
-                "type": "Story<Header>",
-                "defaultValue": "(args: Header) => ({\n  component: Header,\n  props: args,\n})"
+                "file": "src/app/components/Task/task.stories.ts",
+                "type": "object",
+                "defaultValue": "{\n  id: '1',\n  title: 'Test Task',\n  state: 'Task_INBOX',\n  updated_at: new Date(2019, 0, 1, 9, 0),\n}"
             },
             {
                 "name": "Template",
@@ -474,6 +649,14 @@
                 "file": "src/stories/Button.stories.ts",
                 "type": "Story<Button>",
                 "defaultValue": "(args: Button) => ({\n  component: Button,\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "type": "Story<Header>",
+                "defaultValue": "(args: Header) => ({\n  component: Header,\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -488,6 +671,48 @@
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
+            "src/app/components/Task/task.stories.ts": [
+                {
+                    "name": "actionsData",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/Task/task.stories.ts",
+                    "type": "object",
+                    "defaultValue": "{\n  onPinTask: action('onPinTask'),\n  onArchiveTask: action('onArchiveTask'),\n}"
+                },
+                {
+                    "name": "Archived",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/Task/task.stories.ts",
+                    "type": "",
+                    "defaultValue": "() => ({\n  component: TaskComponent,\n  props: {\n    task: {\n      ...taskData,\n      state: 'TASK_ARCHIVED',\n    },\n    onPinTask: actionsData.onPinTask,\n    onArchiveTask: actionsData.onArchiveTask,\n  },\n})"
+                },
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/Task/task.stories.ts",
+                    "type": "",
+                    "defaultValue": "() => ({\n  component: TaskComponent,\n  props: {\n    task: taskData,\n    onPinTask: actionsData.onPinTask,\n    onArchiveTask: actionsData.onArchiveTask,\n  },\n})"
+                },
+                {
+                    "name": "Pinned",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/Task/task.stories.ts",
+                    "type": "",
+                    "defaultValue": "() => ({\n  component: TaskComponent,\n  props: {\n    task: {\n      ...taskData,\n      state: 'TASK_PINNED',\n    },\n    onPinTask: actionsData.onPinTask,\n    onArchiveTask: actionsData.onArchiveTask,\n  },\n})"
+                },
+                {
+                    "name": "taskData",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/Task/task.stories.ts",
+                    "type": "object",
+                    "defaultValue": "{\n  id: '1',\n  title: 'Test Task',\n  state: 'Task_INBOX',\n  updated_at: new Date(2019, 0, 1, 9, 0),\n}"
+                }
+            ],
             "src/test.ts": [
                 {
                     "name": "context",
@@ -503,6 +728,16 @@
                     "subtype": "variable",
                     "file": "src/test.ts",
                     "type": "literal type"
+                }
+            ],
+            "src/app/components/Chip/chip.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/Chip/chip.stories.ts",
+                    "type": "",
+                    "defaultValue": "() => ({\n  component: ChipComponent\n\n})"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -639,7 +874,7 @@
         ]
     },
     "coverage": {
-        "count": 4,
+        "count": 2,
         "status": "low",
         "files": [
             {
@@ -658,6 +893,84 @@
                 "name": "AppComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/Chip/chip.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ChipComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/Chip/chip.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/Task/task.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TaskComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/Task/task.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "actionsData",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/Task/task.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Archived",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/Task/task.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/Task/task.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Pinned",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/Task/task.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "taskData",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
